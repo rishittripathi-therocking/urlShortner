@@ -17,6 +17,11 @@ mongoose.connect(db)
     .then(() => console.log('MongoDb connencted.'))
     .catch(err=> console.log(err));
 
+//Routes
+
+const shorten = require('./routes/api/shorten');
+app.use('api/shorten', shorten);
+
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
