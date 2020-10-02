@@ -2,25 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    url: '',
+    link: ''
+  }
+  render() {
+    return (
+      <div className="App">
+         <fieldset>
+           <input type="text" name="url" placeholder="Enter url using the http(s) protocol" />
+           <input type="submit" value="shorten" />
+         </fieldset>
+         <fieldset>
+            <span id="result"> {this.state.link}</span>
+         </fieldset>
+      </div>
+    );
+  }
 }
 
 export default App;
