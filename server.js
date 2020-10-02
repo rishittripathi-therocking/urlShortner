@@ -2,6 +2,7 @@ const express =require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const URL = require('./models/Urls');
 
 const app = express();
 
@@ -27,7 +28,17 @@ app.use('/api/redirect', redirect);
 
 app.get('/:hash', (req, res) => {
     const id = req.params.hash;
-    console.log(id);
+    //console.log(id);
+    URL.findOne({_id: id}, (err, doc) => {
+        if(doc) {
+            console.log(doc.url);
+            res.redirect('https://'+doc.url);
+        }
+        else {
+            console.log('fasle');
+        }
+
+    })
 })
 
 app.get('/', (req, res) => {
