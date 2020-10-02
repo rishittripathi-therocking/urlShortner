@@ -25,6 +25,11 @@ app.use('/api/shorten', shorten);
 const redirect = require('./routes/api/redirect');
 app.use('/api/redirect', redirect);
 
+app.get('/:hash', (req, res) => {
+    const id = req.params.hash;
+    console.log(id);
+})
+
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
