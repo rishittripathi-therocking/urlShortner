@@ -14,6 +14,8 @@ body:after {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #23253D;
+  color: #fff;
 }
 
 * {
@@ -46,12 +48,13 @@ header h1 {
   font-weight: 100;
 }
 header h1 span {
-  color: red;
+  color: grey;
 }
 header small {
   display: block;
   font-size: 14px;
   text-align: right;
+  color: #7e8099;
 }
 
 form {
@@ -59,4 +62,33 @@ form {
   width: 100%;
   margin: auto;
   margin-top: 60px;
+}
+form fieldset {
+  border: none;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+form fieldset input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+form fieldset input[type=text] {
+  width: 100%;
+  padding: 20px;
+  padding-right: 125px;
+}
+form fieldset input[type=submit] {
+  background-color: #108d7d;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  line-height: 14px;
+  font-size: 14px;
+  height: 100%;
+  padding: 20px;
 }
