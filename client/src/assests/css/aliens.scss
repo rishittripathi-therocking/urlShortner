@@ -68,6 +68,15 @@ form  {
             box-shadow: none;
             outline-offset: 0px;
         }
+        #result {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+            background: darken(#323052, 10%);
+            text-shadow: 1px 1px 1px #000;
+        }
         input[type='text'] {
             width: 100%;
             padding: 20px;
@@ -88,8 +97,16 @@ form  {
             cursor: pointer;
             transition: 0.6s all;
             &:hover{
-                background: lighten();
+                background: lighten(#108d7d, 10%);
             }
         }
     }
+}
+
+.hide-result {
+    opacity: 0;
+}
+.display-result {
+    opacity: 1;
+    transition: 0.3s all;
 }

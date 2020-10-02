@@ -58,7 +58,7 @@ class App extends React.Component {
                     />
                   <input type="submit" value="shorten" />
                 </fieldset>
-                <fieldset>
+                <fieldset className={this.state.link!==''?'display-result':'hide-result'}>
                     <span id="result"> {this.state.link}</span>
               </fieldset>
             </form>

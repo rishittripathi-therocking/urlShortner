@@ -68,11 +68,23 @@ form fieldset {
   position: relative;
   padding: 0px;
   margin: 0px;
+  outline: none;
+  border: none;
 }
 form fieldset input:focus {
   outline: none;
   border: none;
   box-shadow: none;
+  outline-offset: 0px;
+}
+form fieldset #result {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  background: #1e1d32;
+  text-shadow: 1px 1px 1px #000;
 }
 form fieldset input[type=text] {
   width: 100%;
@@ -92,4 +104,17 @@ form fieldset input[type=submit] {
   height: 100%;
   padding: 20px;
   cursor: pointer;
+  transition: 0.6s all;
+}
+form fieldset input[type=submit]:hover {
+  background: #15bba6;
+}
+
+.hide-result {
+  opacity: 0;
+}
+
+.display-result {
+  opacity: 1;
+  transition: 0.3s all;
 }
