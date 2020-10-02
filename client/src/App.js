@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import validator from 'validator';
 import './App.css';
 
 class App extends React.Component {
@@ -15,14 +16,25 @@ class App extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/shorten', {
-      url: this.state.url
-    })
-    .then( res => {
-      this.setState({
-        link: `http://urlshortner/${res.data.hash}`
+    const validURL=validator.isURL(this.state.url, {
+      require_protocol: true
+    });
+
+    if(!validURL) {
+      alert('Please ensure this url is a valid and contains http(s) protocol.');
+    }
+    else {
+      console.log("URL is : ", this.state.url);
+      axios.post('http://localhost:5000/api/shorten', {
+        url: this.state.url
       })
-    })
+      .then( res => {
+        this.setState({
+          link: `http://urlshortner/${res.data.hash}`
+        })
+      })
+    }
+    
   };
   render() {
     return (
