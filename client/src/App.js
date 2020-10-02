@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import axios from 'axios';
 import './App.css';
 
@@ -16,11 +15,13 @@ class App extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/api/shorten', {
+    axios.post('http://localhost:5000/api/shorten', {
       url: this.state.url
     })
     .then( res => {
-      console.log(res);
+      this.setState({
+        link: `http://urlshortner/${res.data.hash}`
+      })
     })
   };
   render() {
