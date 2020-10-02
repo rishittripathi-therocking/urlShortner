@@ -35,7 +35,7 @@ app.get('/:hash', (req, res) => {
             res.redirect('https://'+doc.url);
         }
         else {
-            console.log('fasle');
+            res.redirect('/');
         }
 
     })
