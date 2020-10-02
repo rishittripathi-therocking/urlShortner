@@ -1,3 +1,38 @@
 @import 'grid';
 @import 'https://cdn.js.cloudfare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
 @import url('htpps://fonts.googleapis.com/csscss?family=Roboto:300,400,700');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.body-wrap {
+    max-width: 1336px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    max-width: 300px;
+    margin: auto;
+    h1 {
+        margin: 0;
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: 100;
+        span{
+            color: red;
+        }
+    }
+    small {
+        display: block;
+        font-size: 14px;
+        text-align: right;
+    }
+}

@@ -39,30 +39,32 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div className="body-wrap">
-        <header>
-          <h1>
-            <span className="highlight" > urlshortner</span>
-          </h1>
-          <small>...free and always will be</small>
-        </header>
-        <main>
-          <form onSubmit={this.handleSubmit}>
-              <fieldset>
-                <input 
-                  type="text" 
-                  name="url" 
-                  placeholder="Enter url using the http(s) protocol" 
-                  onChange={this.handleChange}
-                  />
-                <input type="submit" value="shorten" />
+      <div className="container">
+        <div className="body-wrap">
+          <header>
+            <h1>
+              <span className="highlight" > url</span>shortner
+            </h1>
+            <small>...free and always will be</small>
+          </header>
+          <main>
+            <form onSubmit={this.handleSubmit}>
+                <fieldset>
+                  <input 
+                    type="text" 
+                    name="url" 
+                    placeholder="Enter url using the http(s) protocol" 
+                    onChange={this.handleChange}
+                    />
+                  <input type="submit" value="shorten" />
+                </fieldset>
+                <fieldset>
+                    <span id="result"> {this.state.link}</span>
               </fieldset>
-              <fieldset>
-                  <span id="result"> {this.state.link}</span>
-            </fieldset>
-          </form>
-          
-        </main>
+            </form>
+            
+          </main>
+        </div>
       </div>
     );
   }
