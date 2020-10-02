@@ -33,6 +33,7 @@ class App extends React.Component {
           link: `http://urlshortner/${res.data.hash}`
         })
       })
+      .catch(err=> console.log(err));
     }
     
   };
