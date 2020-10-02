@@ -20,7 +20,7 @@ mongoose.connect(db)
 //Routes
 
 const shorten = require('./routes/api/shorten');
-app.use('api/shorten', shorten);
+app.use('/api/shorten', shorten);
 
 app.get('/', (req, res) => {
     res.send('Hello World');
