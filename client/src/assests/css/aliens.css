@@ -91,4 +91,5 @@ form fieldset input[type=submit] {
   font-size: 14px;
   height: 100%;
   padding: 20px;
+  cursor: pointer;
 }
