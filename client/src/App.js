@@ -40,7 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="body-wrap">
+        <div  className="body-wrap">
           <header>
             <h1>
               <span className="highlight" > url</span>shortner
